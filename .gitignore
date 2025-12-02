@@ -43,3 +43,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Model files - exclude large .pte files from version control
+*.pte
+assets/models/*.pte
+assets/models/**/*.pte
