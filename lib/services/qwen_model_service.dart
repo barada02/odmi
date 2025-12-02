@@ -23,9 +23,9 @@ class QwenModelService {
       print('Config loaded: vocab_size=${_config!.vocabSize}');
 
       // Load model from assets to temporary file
-      final modelData = await rootBundle.load('assets/models/qwen.pte');
+      final modelData = await rootBundle.load('assets/models/qwen3_0_6b_8da4w.pte');
       final tempDir = await getTemporaryDirectory();
-      final modelFile = File('${tempDir.path}/qwen.pte');
+      final modelFile = File('${tempDir.path}/qwen3_0_6b_8da4w.pte');
       
       print('Copying model to temporary directory...');
       await modelFile.writeAsBytes(modelData.buffer.asUint8List());
